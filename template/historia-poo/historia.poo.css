@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.presentation-slides {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding-left: 0; /* Remove padding à esquerda */
+}
+
+.presentation-slides li {
+    padding: 3px; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Cantos arredondados usando rem */
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.fundo{
+    background-color: #d1cdcdc2;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 2%;
+}
+
+/*===========================NAVBAR============================*/
+.navbar {
+    display: flex;
+    background-color: #0d7400;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    width: 100%;
+    padding-top: 1px;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #0d7400;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translateY(-10px);
+}
+
+/*===========================FIM DA NAVBAR============================*/
+
+/*===========================CAMPO HEADER=============================*/
+
+header {
+    background: #0d7400;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+/*=========================== FIM DO CAMPO HEADER=============================*/
+
+/*===================================INICIO DO CAMPO DE EDIÇAO TXT==============================*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Centraliza a imagem */
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.introducao{
+    text-align: justify; /* Justifica o texto */
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; /* Define uma largura, ajustável conforme o tamanho desejado */
+}
+/*===================================FIM DO CAMPO DE EDIÇAO TXT==============================*/
+
+/*=================================REFERENCIAS==================================*/
+.references {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.references h3 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000; /* Linha abaixo do título */
+    width: 100%;
+    text-align: center;
+}
+
+.references .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/*.references .left,.references .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.references .divider {
+    width: 2px;
+    height: auto;
+    background-color: #000;
+}
+
+.references ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+    width: 500%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.references .divider {
+    width: 2px;
+    height: 5.5%;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-5%);
+    margin-top: 10px;
+}
+*/
+.references li {
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 50%; /* Ajusta a largura para dividir em duas colunas */
+}
+
+.references li:nth-child(odd) {
+    text-align: left; /* Alinha os itens ímpares à esquerda */
+}
+
+.references li:nth-child(even) {
+    text-align: right; /* Alinha os itens pares à direita */
+}
+
+.references a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.references a:hover {
+    text-decoration: underline;
+}
+
+/*===========================DIV DE TEXTO E REFERENCIAS============================*/
+.text-and-references {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    padding: 1rem;
+    width: 100%;
+    height: 100vh; /* Ocupa a altura total da página */
+}
+/*=================================FIM DAS REFERENCIAS==================================*/
+
+
+/*===================================Referencias responsivo para Mobile=====================================*/
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .references {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .references h3 {
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .references .content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 1rem;
+        position: relative; /* Para posicionar a linha divisora no centro */
+    }
+
+    .references .left,
+    .references .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .references .divider {
+        width: 2px;
+        height: 0px; /* Altura ajustada para a linha divisora */
+        background-color: #000;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 10px;
+    }
+    
+    .references ul {
+        list-style-position: inside;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .references .left ul,
+    .references .right ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .references .left ul li,
+    .references .right ul li {
+        width: 100%; /* Ocupa 100% da largura do lado respectivo */
+        text-align: left; /* Ajusta o alinhamento à esquerda */
+        margin-top: 0.5rem;
+    }
+    
+    .references .right ul li {
+        text-align: right; /* Alinha à direita os itens do lado direito */
+    }
+    
+    .references a {
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .references a:hover {
+        text-decoration: underline;
+    }
+}
+/*===================================Fim da Referencias responsivo para Mobile=====================================*/
+
+/* Navbar responsivo para mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Esconde a navbar padrão no mobile */
+    }
+
+    .navbar-mobile {
+        display: block;
+        padding: 10px;
+        background-color: #0d7400;
+        position: relative;
+    }
+
+    .navbar-mobile .nav-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-mobile .nav-carousel a {
+        color: #fff;
+        font-weight: bold;
+        padding: 15px 20px;
+        text-decoration: none;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        /*transition: background-color 0.3s, transform 0.3s;*/
+    }
+
+    .navbar-mobile .nav-carousel a:hover {
+        background-color: #0d7400;
+        border-radius: 20px;
+        /*transform: translateY(-10px);*/
+    }
+
+    /* Estilizando as setas de navegação */
+    .slick-prev,
+    .slick-next {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .slick-prev {
+        left: 10px; /* Alinha a seta anterior à esquerda */
+    }
+
+    .slick-next {
+        right: 10px; /* Alinha a seta próxima à direita */
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover {
+        color: #ffffff;
+    }
+}

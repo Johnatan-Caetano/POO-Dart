@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/*===========================NAVBAR============================*/
+
+.navbar {
+    display: flex;
+    background-color: #0d7400;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 0; /* Removido padding para usar unidades relativas */
+}
+
+.navbar a {
+    color: #fff;
+    font-weight: bold;
+    padding: 1rem 1.5rem; /* Usar rem para espaçamento */
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #0d7400;
+    border-radius: 1.25rem; /* Usar rem para bordas arredondadas */
+    transform: translateY(-0.625rem); /* Usar rem para a transformação */
+}
+
+/* Navbar responsivo para mobile */
+@media (max-width: 48rem) { /* 768px = 48rem */
+    .navbar {
+        display: none; /* Esconde a navbar padrão no mobile */
+    }
+
+    .navbar-mobile {
+        display: block;
+        padding: 0.625rem; /* Usar rem para padding */
+        background-color: #0d7400;
+        position: relative;
+    }
+
+    .navbar-mobile .nav-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-mobile .nav-carousel a {
+        color: #fff;
+        font-weight: bold;
+        padding: 1rem 1.5rem; /* Usar rem para espaçamento */
+        text-decoration: none;
+        text-align: center;
+        font-family: cursive;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .navbar-mobile .nav-carousel a:hover {
+        background-color: #0d7400;
+        border-radius: 1.25rem; /* Usar rem para bordas arredondadas */
+        transform: translateY(-0.625rem); /* Usar rem para a transformação */
+    }
+
+    /* Estilizando as setas de navegação */
+    .slick-prev,
+    .slick-next {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem; /* Usar rem ou em, mas é aceitável como está */
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .slick-prev {
+        left: 1rem; /* Usar rem para alinhar a seta */
+    }
+
+    .slick-next {
+        right: 1rem; /* Usar rem para alinhar a seta */
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover {
+        color: #0d7400;
+    }
+    .frameworks{
+        margin-left: 6%;
+    }
+}
+
+/*===========================CAMPO HEADER=============================*/
+
+header {
+    background: #0d7400;
+    color: #fff;
+    padding: 1rem; /* Usar rem para padding */
+    text-align: center;
+}
+
+main {
+    background-color: #d1cdcdc2;
+    margin-left: 5%; /* Pode manter em porcentagem */
+    margin-right: 5%; /* Pode manter em porcentagem */
+    margin-top: 5%; /* Pode manter em porcentagem */
+}
+
+.content {
+    font-weight: bold;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-bottom: 2%;
+    min-width: 300px;
+    padding: 2.5rem; /* Usar rem para padding */
+    text-align: left; /* Alinhamento à esquerda para melhor legibilidade */
+}
+.frameworks{
+    margin-left: 1%;
+}
+
+.presentation-slides {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding-left: 0; /* Remove padding à esquerda */
+}
+
+.presentation-slides li {
+    margin: 1rem 0; /* Espaçamento entre os itens */
+    background-color: #f0f0f0; /* Fundo cinza claro para destacar os tópicos */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Cantos arredondados usando rem */
+}
