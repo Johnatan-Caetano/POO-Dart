@@ -1,5 +1,13 @@
+#Grupo Verde Escuro
+## Programação Orientada a Objetos e Dart
 
-# Programação Orientada a Objetos e Dart
+##Alunos contribuintes:
+- Johnatan Caetano dos Santos RGM: 30087155
+- Felipe Monteiro Silveira RGM: 31555675
+- Victoria Gabrielle RGM: 41016084
+- Sávio Guimarães Saraiva RGM: 30359201
+- João Pedro Marques Boa Sorte Soares RGM: 32241291
+- Mateus Clark Martins Andrade RGM: 30157668
 
 Este repositório é uma apresentação sobre Programação Orientada a Objetos (POO) usando a linguagem Dart. Ele contém uma introdução aos princípios de POO aplicados em Dart e um projeto desenvolvido em Flutter para ilustrar a aplicação prática desses conceitos.
 
