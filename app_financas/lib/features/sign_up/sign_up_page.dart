@@ -115,16 +115,16 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
         key: Keys.signUpListView,
         children: [
           Text(
-            'Spend Smarter',
+            'Gaste de forma mais inteligente',
             textAlign: TextAlign.center,
-            style: AppTextStyles.mediumText36.copyWith(
+            style: AppTextStyles.mediumText30.copyWith(
               color: AppColors.greenOne,
             ),
           ),
           Text(
-            'Save More',
+            'Economize mais',
             textAlign: TextAlign.center,
-            style: AppTextStyles.mediumText36.copyWith(
+            style: AppTextStyles.mediumText30.copyWith(
               color: AppColors.greenOne,
             ),
           ),
@@ -138,7 +138,7 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
                 CustomTextFormField(
                   key: Keys.signUpNameField,
                   controller: _nameController,
-                  labelText: "your name",
+                  labelText: "Digite seu nome",
                   hintText: "JOHN DOE",
                   inputFormatters: [
                     UpperCaseTextInputFormatter(),
@@ -148,22 +148,22 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
                 CustomTextFormField(
                   key: Keys.signUpEmailField,
                   controller: _emailController,
-                  labelText: "your email",
+                  labelText: "Digite seu email",
                   hintText: "john@email.com",
                   validator: Validator.validateEmail,
                 ),
                 PasswordFormField(
                   key: Keys.signUpPasswordField,
                   controller: _passwordController,
-                  labelText: "choose your password",
+                  labelText: "Digite sua senha",
                   hintText: "*********",
                   validator: Validator.validatePassword,
                   helperText:
-                      "Must have at least 8 characters, 1 capital letter and 1 number.",
+                      "Deve ter pelo menos 8 caracteres, 1 letra maiúscula e 1 número.",
                 ),
                 PasswordFormField(
                   key: Keys.signUpConfirmPasswordField,
-                  labelText: "confirm your password",
+                  labelText: "Confirme sua senha",
                   hintText: "*********",
                   validator: (value) => Validator.validateConfirmPassword(
                     _passwordController.text,
@@ -183,7 +183,7 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
             ),
             child: PrimaryButton(
               key: Keys.signUpButton,
-              text: 'Sign Up',
+              text: 'Cadastrar',
               onPressed: _onSignUpButtonPressed,
             ),
           ),
@@ -195,13 +195,13 @@ class _SignUpPageState extends State<SignUpPage> with CustomModalSheetMixin {
             ),
             children: [
               Text(
-                'Already have account? ',
+                'Já possui uma conta? ',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.grey,
                 ),
               ),
               Text(
-                'Sign In ',
+                'Entre aqui ',
                 style: AppTextStyles.smallText.copyWith(
                   color: AppColors.greenOne,
                 ),

@@ -113,7 +113,7 @@ class _StatsPageState extends State<StatsPage>
                                   tooltipBorder: const BorderSide(
                                     color: AppColors.greenOne,
                                   ),
-                                  tooltipBgColor: AppColors.antiFlashWhite,
+                                  getTooltipColor: (tooltipItem) => AppColors.antiFlashWhite,
                                   getTooltipItems: (touchedSpots) {
                                     return touchedSpots.map((e) {
                                       return LineTooltipItem(
