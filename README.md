@@ -83,6 +83,9 @@ O projeto segue uma arquitetura organizada para facilitar a manutenção e expan
     - **services**: Serviços responsáveis por realizar operações de rede e gerenciar dados externos.
     - **utils**: Funções e constantes auxiliares para otimizar a estrutura e facilitar a reutilização de código.
 
+## Execução
+Para melhor entendimento, é possível baixar o app-release.apk e executar em um dispositivo android, para facilitar a execução do app.
+
 ## Contribuição
 
 Para contribuir, siga os passos abaixo:
